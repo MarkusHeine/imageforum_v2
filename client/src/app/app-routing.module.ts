@@ -5,7 +5,17 @@ import { AdminDashboardComponent } from "./admin-dashboard/admin-dashboard.compo
 
 const routes: Routes = [
   { path: "", component: ClientComponent },
-  { path: "admin", component: AdminDashboardComponent }
+  {
+    path: "admin",
+    component: AdminDashboardComponent,
+    children: [
+      {
+        path: "admin",
+        loadChildren:
+          "./admin-dashboard/admin-dashboard.component#AdminDashboardComponent"
+      }
+    ]
+  }
 ];
 
 @NgModule({
