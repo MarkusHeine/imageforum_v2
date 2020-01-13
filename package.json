@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "client": "cd client && yarn start",
+    "client": "cd client && ng serve",
     "dev": "concurrently --kill-others-on-fail \"yarn run start\" \"yarn run client\""
   },
   "dependencies": {
@@ -12,5 +12,9 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "morgan": "~1.9.1"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/MarkusHeine/imageforum_v2.git",
+  "author": "MarkusHeine <markusheine.dev@gmail.com>",
+  "license": "MIT"
 }
