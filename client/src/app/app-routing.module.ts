@@ -1,3 +1,4 @@
+import { NotFoundComponent } from "./not-found/not-found.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ClientComponent } from "./client/client.component";
@@ -7,14 +8,7 @@ const routes: Routes = [
   { path: "", component: ClientComponent },
   {
     path: "admin",
-    component: AdminDashboardComponent,
-    children: [
-      {
-        path: "admin",
-        loadChildren:
-          "./admin-dashboard/admin-dashboard.component#AdminDashboardComponent"
-      }
-    ]
+    component: AdminDashboardComponent
   }
 ];
 
@@ -23,3 +17,9 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
+// ,
+//   {
+//     path: "**",
+//     component: NotFoundComponent
+//   }

@@ -1,3 +1,4 @@
+import { AdminDashbboardModule } from "./admin-dashboard/admin-dashbboard.module";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
@@ -15,19 +16,10 @@ import { DashboardComponent } from "./admin-dashboard/components/dashboard/dashb
 import { UploadComponent } from "./admin-dashboard/components/upload/upload.component";
 import { UsersComponent } from "./admin-dashboard/components/users/users.component";
 import { CollectionsComponent } from "./admin-dashboard/components/collections/collections.component";
-import { AdminDashboardRoutes } from "./admin-dashboard/admin-dasboard.routing";
+import { NotFoundComponent } from "./not-found/not-found.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AdminDashboardComponent,
-    ClientComponent,
-    SidebarComponent,
-    DashboardComponent,
-    UploadComponent,
-    UsersComponent,
-    CollectionsComponent
-  ],
+  declarations: [AppComponent, ClientComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,7 +29,7 @@ import { AdminDashboardRoutes } from "./admin-dashboard/admin-dasboard.routing";
     NgbModule,
     RouterModule,
     AppRoutingModule,
-    RouterModule.forChild(AdminDashboardRoutes)
+    AdminDashbboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
