@@ -1,0 +1,26 @@
+<form
+  (ngSubmit)="onUploadSubmit()"
+  class="form-inline mr-auto"
+  ENCTYPE="multipart/form-data"
+>
+  <div class="input-group">
+    <div class="custom-file">
+      <input
+        class="form-control mr-sm-2"
+        type="file"
+        placeholder="Search"
+        aria-label="Search"
+        id="uploadInput"
+        name="uploadInput"
+        multiple
+        (change)="onUploadFormChange($event)"
+        accept="image/*"
+      />
+    </div>
+    <div class="input-group-append">
+      <button class="btn btn-dark" type="submit">
+        Upload
+      </button>
+    </div>
+  </div>
+</form>

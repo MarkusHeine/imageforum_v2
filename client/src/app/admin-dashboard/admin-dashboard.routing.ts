@@ -1,6 +1,7 @@
+import { UploadPublishComponent } from "./components/upload-publish/upload-publish.component";
 import { CollectionsComponent } from "./components/collections/collections.component";
 import { UsersComponent } from "./components/users/users.component";
-import { UploadComponent } from "./components/upload/upload.component";
+import { UploadComponent } from "./components/upload-publish/upload/upload.component";
 import { RouterModule, Routes } from "@angular/router";
 import { ModuleWithProviders } from "@angular/core";
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
@@ -17,7 +18,7 @@ export const adminDashboardRoutes: Routes = [
       },
       {
         path: "upload",
-        component: UploadComponent
+        component: UploadPublishComponent
       },
       {
         path: "users",
