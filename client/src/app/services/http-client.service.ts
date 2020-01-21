@@ -18,7 +18,7 @@ export class HttpClientService {
 
   unpublishedImages() {
     return this.httpClient.get(
-      `http://localhost:3000/api/v2/adminrouter/imageupload`
+      `http://localhost:3000/api/v2/adminrouter/unpublished`
     );
   }
 }

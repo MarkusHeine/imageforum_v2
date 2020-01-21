@@ -11,6 +11,7 @@ import { RouterModule } from "@angular/router";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ClientComponent } from "./client/client.component";
 import { NotFoundComponent } from "./not-found/not-found.component";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [AppComponent, ClientComponent, NotFoundComponent],
@@ -24,7 +25,8 @@ import { NotFoundComponent } from "./not-found/not-found.component";
     RouterModule,
     AppRoutingModule,
     AdminDashbboardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

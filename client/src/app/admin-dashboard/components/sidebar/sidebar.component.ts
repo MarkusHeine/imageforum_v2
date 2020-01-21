@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { faChartLine } from "@fortawesome/free-solid-svg-icons";
 
 declare interface RouteInfo {
   path: string;
@@ -9,7 +10,7 @@ declare interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-  { path: "dashboard", title: "Dashboard", icon: "", class: "" },
+  { path: "dashboard", title: "Dashboard", icon: "faChartLine", class: "" },
   { path: "upload", title: "Upload & Publish", icon: "", class: "" },
   { path: "users", title: "Users", icon: "", class: "" },
   { path: "collections", title: "Collections", icon: "", class: "" }

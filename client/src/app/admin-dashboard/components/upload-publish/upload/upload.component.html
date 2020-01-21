@@ -1,12 +1,17 @@
 <form
   (ngSubmit)="onUploadSubmit()"
-  class="form-inline mr-auto"
+  class="form-inline mr-auto border rounded"
   ENCTYPE="multipart/form-data"
 >
   <div class="input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text border-0 rounded-0" id="basic-addon1">
+        choose file</span
+      >
+    </div>
     <div class="custom-file">
       <input
-        class="form-control mr-sm-2"
+        class="form-control-file mr-sm-2 p-1"
         type="file"
         placeholder="Search"
         aria-label="Search"
@@ -18,7 +23,7 @@
       />
     </div>
     <div class="input-group-append">
-      <button class="btn btn-dark" type="submit">
+      <button class="input-group-text border-0 rounded-0" type="submit">
         Upload
       </button>
     </div>

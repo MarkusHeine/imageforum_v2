@@ -1,14 +1,18 @@
-<ul class="navbar-nav">
-  <li *ngFor="let menuItem of menuItems" class="nav-item">
-    <a
-      routerLinkActive="active"
-      [routerLink]="['/admin', menuItem.path]"
-      class="nav-link btn bt-lg btn-primary m-1"
-    >
-      {{ menuItem.title }}
-    </a>
-  </li>
-  <li class="nav-item">
-    <a [routerLink]="['/']" class="nav-link btn bt-lg btn-primary m-1"> Home</a>
-  </li>
-</ul>
+<div class="navbar navbar-vertical navbar-light">
+  <span class="navbar-brand mb-0 h1">Dashboard</span>
+  <hr />
+  <ul class="navbar-nav">
+    <li *ngFor="let menuItem of menuItems" class="nav-item">
+      <a
+        routerLinkActive="active"
+        [routerLink]="['/admin', menuItem.path]"
+        class="nav-link border-bottom m-1 "
+      >
+        {{ menuItem.title }}
+      </a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="['/']" class="nav-link border-bottom m-1"> Home</a>
+    </li>
+  </ul>
+</div>

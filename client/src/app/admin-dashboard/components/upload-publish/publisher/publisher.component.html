@@ -1,1 +1,54 @@
-<p>publisher works!</p>
+<div
+  class="card m-2 p-2 d-flex flex-row"
+  *ngFor="let unpublishedImage of unpublishedImages"
+>
+  <div class="col col-md-5">
+    <img
+      [src]="unpublishedImage.staticUrl"
+      alt=""
+      class="card-img-top col-md-12"
+    />
+    <div class="card-body">
+      <dl class="row">
+        <dt class="col-md-5">created</dt>
+        <dd class="col-md-7">
+          {{ unpublishedImage.metadata.DigitalCreationDate.year }}/{{
+            unpublishedImage.metadata.DigitalCreationDate.month
+          }}/{{ unpublishedImage.metadata.DigitalCreationDate.day }}
+          {{ unpublishedImage.metadata.TimeCreated.hour }}:{{
+            unpublishedImage.metadata.TimeCreated.minute
+          }}
+        </dd>
+        <dt class="col-md-5">Dimensions</dt>
+        <dd class="col-md-7">{{ unpublishedImage.metadata.ImageSize }}</dd>
+        <dt class="col-md-5">Resolution</dt>
+        <dd class="col-md-7">{{ unpublishedImage.metadata.XResolution }}</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="col col-md-7">
+    <form #metadataForm="ngForm">
+      <div class="form-group col-md-12">
+        <label for="inputTitle">Title</label>
+        <input
+          type="text"
+          [(ngModel)]="unpublishedImage.metadata.Headline"
+          name="inputTitle"
+          class="form-control"
+        />
+      </div>
+    </form>
+    <button
+      class="btn btn-light float-right m-1"
+      (click)="onPublishSingle(unpublishedImage.metadata.FileName)"
+    >
+      publish single
+    </button>
+    <button
+      class="btn btn-light float-right m-1"
+      (click)="onSaveSingle(unpublishedImage.metadata.FileName)"
+    >
+      save single
+    </button>
+  </div>
+</div>
